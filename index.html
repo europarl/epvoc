@@ -61,14 +61,14 @@ $(function(){
 <dt>Latest version:</dt>
 <dd><a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a></dd>
 <dt>Revision:</dt>
-<dd>1.1</dd>
+<dd>1.2</dd>
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://data.europa.eu/eli/ontology#">ELI Ontology</a></dd><dd><a href="http://www.w3.org/2004/02/skos/core">SKOS Simple Knowledge Organization System
    Reference</a></dd><dd><a href="http://www.w3.org/2006/vcard/ns">vcard</a></dd><dd><a href="http://www.w3.org/2008/05/skos-xl">SKOS eXtension for Labels (SKOS-XL)</a></dd><dd><a href="http://www.w3.org/ns/org#">The Organization Ontology (ORG)</a></dd><dd><a href="http://www.w3.org/ns/person">Person Ontology</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="epvoc.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-European%20Parliament%20Legal%20Notice-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+<dt>Download serialization:</dt><dd><span><a href="epvoc.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.europarl.europa.eu/legal-notice" target="_blank"><img src="https://img.shields.io/badge/License-European%20Parliament%20Legal%20Notice-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd> Revision: 1.1.</dd>
+<dd> Revision: 1.2.</dd>
 </dl>
 
 <hr/>
@@ -200,6 +200,42 @@ This ontology has the following classes and properties.</span>
       <a href="#upperOfficialGivenName"
          title="https://data.europarl.europa.eu/def/epvoc#upperOfficialGivenName">epvoc:upperOfficialGivenName</a>
    </li>
+   <li>
+      <a href="#agendaLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#agendaLabel">
+         <span>epvoc:agendaLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#decisionAboutId"
+         title="https://data.europarl.europa.eu/def/epvoc#decisionAboutId">
+         <span>epvoc:decisionAboutId</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hadResponsibleOrganization"
+         title="https://data.europarl.europa.eu/def/epvoc#hadResponsibleOrganization">
+         <span>epvoc:hadResponsibleOrganization</span>
+      </a>
+   </li>
+   <li>
+      <a href="#headingLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#headingLabel">
+         <span>epvoc:headingLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referenceText"
+         title="https://data.europarl.europa.eu/def/epvoc#referenceText">
+         <span>epvoc:referenceText</span>
+      </a>
+   </li>
+   <li>
+      <a href="#structuredLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#structuredLabel">
+         <span>epvoc:structuredLabel</span>
+      </a>
+   </li>
 </ul><h4>Datatypes</h4>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -223,8 +259,60 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#periclesId	" title="https://data.europarl.europa.eu/def/epvoc#periclesId	">epvoc:periclesId</a>
    </li>
+   <li>
+      <a href="#agendaId"
+         title="https://data.europarl.europa.eu/def/epvoc#agendaId">
+         <span>epvoc:agendaId</span>
+      </a>
+   </li>
+   <li>
+      <a href="#agendaPoint"
+         title="https://data.europarl.europa.eu/def/epvoc#agendaPoint">
+         <span>epvoc:agendaPoint</span>
+      </a>
+   </li>
+   <li>
+      <a href="#dlvId" title="https://data.europarl.europa.eu/def/epvoc#dlvId">
+         <span>epvoc:dlvId</span>
+      </a>
+   </li>
+   <li>
+      <a href="#headingLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#headingLabel">
+         <span>epvoc:headingLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referenceText"
+         title="https://data.europarl.europa.eu/def/epvoc#referenceText">
+         <span>epvoc:referenceText</span>
+      </a>
+   </li>
+   <li>
+      <a href="#structuredLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#structuredLabel">
+         <span>epvoc:structuredLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#votingId"
+         title="https://data.europarl.europa.eu/def/epvoc#votingId">
+         <span>epvoc:votingId</span>
+      </a>
+   </li>
 </ul>
 </div>
+
+<h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://data.europarl.europa.eu/def/epvoc#scAlignment" title="https://data.europarl.europa.eu/def/epvoc#scAlignment">
+         <span>scAlignement
+         </span>
+      </a>
+   </li>
+</ul>
    
 
 <!--CROSSREF SECTION-->
@@ -746,6 +834,42 @@ This section provides details for each class and property defined by EPVOC.
          <a href="#upperOfficialGivenName"
             title="https://data.europarl.europa.eu/def/epvoc#upperOfficialGivenName">epvoc:upperOfficialGivenName</a>
       </li>
+      <li>
+         <a href="#agendaLabel"
+            title="https://data.europarl.europa.eu/def/epvoc#agendaLabel">
+            <span>epvoc:agendaLabel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#decisionAboutId"
+            title="https://data.europarl.europa.eu/def/epvoc#decisionAboutId">
+            <span>epvoc:decisionAboutId</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hadResponsibleOrganization"
+            title="https://data.europarl.europa.eu/def/epvoc#hadResponsibleOrganization">
+            <span>epvoc:hadResponsibleOrganization</span>
+         </a>
+      </li>
+      <li>
+         <a href="#headingLabel"
+            title="https://data.europarl.europa.eu/def/epvoc#headingLabel">
+            <span>epvoc:headingLabel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#referenceText"
+            title="https://data.europarl.europa.eu/def/epvoc#referenceText">
+            <span>epvoc:referenceText</span>
+         </a>
+      </li>
+      <li>
+         <a href="#structuredLabel"
+            title="https://data.europarl.europa.eu/def/epvoc#structuredLabel">
+            <span>epvoc:structuredLabel</span>
+         </a>
+      </li>
    </ul>
    <div class="entity" id="byteSize">
       <h3>epvoc:byteSize<sup class="type-dp" title="data property">dp</sup>
@@ -820,6 +944,9 @@ This section provides details for each class and property defined by EPVOC.
       </h3>
       <p>
          <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#epNumberVersion</p>
+         <div class="comment">
+            <span class="markdown">This property identifies the version the epvoc:epNumber.</span>
+         </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -828,10 +955,7 @@ This section provides details for each class and property defined by EPVOC.
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#epNumberVersion">annotation property</a>
-            </dd>
+           
          </dl>
       </div>
    </div>
@@ -842,6 +966,9 @@ This section provides details for each class and property defined by EPVOC.
       </h3>
       <p>
          <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#identifierYear</p>
+         <div class="comment">
+            <span class="markdown">This property indicates the year identifier for a document.</span>
+         </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -855,10 +982,6 @@ This section provides details for each class and property defined by EPVOC.
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#identifierYear">annotation property</a>
             </dd>
          </dl>
       </div>
@@ -1206,6 +1329,236 @@ This section provides details for each class and property defined by EPVOC.
          </dl>
       </div>
    </div>
+   <div class="entity" id="agendaLabel">
+      <h3>epvoc:agendaLabel<sup class="type-dp" title="object property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#agendaLabel</p>
+         <span class="markdown">Label in the Agenda.</span>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#ForeseenActivity"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#ForeseenActivity">foreseen activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#langString"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#langString">lang string</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="decisionAboutId">
+      <h3>epvoc:decisionAboutId<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#decisionAboutId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Decision"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Decision">decision</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+
+   <div class="entity" id="hadResponsibleOrganization">
+      <h3>epvoc:hadResponsibleOrganization<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#hadResponsibleOrganization</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+
+   <div class="entity" id="headingLabel">
+      <h3>epvoc:headingLabel<sup class="type-dp" title="object property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#headingLabel</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#langString"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#langString">lang string</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+
+         </dl>
+      </div>
+   </div>
+
+   <div class="entity" id="referenceText">
+      <h3>epvoc:referenceText<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#referenceText</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#langString"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#langString">lang string</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            
+         </dl>
+      </div>
+   </div>
+
+   <div class="entity" id="structuredLabel">
+      <h3>epvoc:structuredLabel<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#structuredLabel</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#langString"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#langString">lang string</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sortLabel">
+      <h3>epvoc:sortLabel<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#sortLabel</p>
+      <div class="comment">
+         <span class="markdown">This property identifies the part of the family name of the Person used to sort alphabetically in a  list.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://xmlns.com/foaf/0.1/Person"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/Person">person</a>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+
+   <div class="entity" id="expressionContent">
+      <h3>epvoc:expressionContent<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#expressionContent</p>
+      <div class="comment">
+         <span class="markdown">This property is a shortcut of the more fully developed path from eli:Work to eli:Expression.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://data.europa.eu/eli/ontology#Work"
+                  target="_blank"
+                  title="http://data.europa.eu/eli/ontology#Work">work</a>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+<!--datatypes-->
    <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="datatypes">
       <h3 id="datatypes-headline" class="list">Datatypes</h3>
       <ul class="hlist">
@@ -1342,7 +1695,163 @@ This section provides details for each class and property defined by EPVOC.
             </dd>
          </dl>
       </div>
-      
+      <div class="entity" id="agendaId">
+         <h3>epvoc:agendaId<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#agendaId</p>
+         <div class="description">
+            <dl>
+               <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd>
+   
+            </dl>
+         </div>
+      </div>
+      <div class="entity" id="agendaPoint">
+         <h3>epvoc:agendaPoint<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#agendaPoint</p>
+         <div class="description">
+            <dl> <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd></dl>
+   
+         </div>
+      </div>
+      <div class="entity" id="dlvId">
+         <h3>epvoc:dlvId<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#dlvId</p>
+         <div class="description">
+            <dl>
+               <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd>
+   
+            </dl>
+         </div>
+      </div>
+      <div class="entity" id="headingLabel">
+         <h3>epvoc:headingLabel<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#headingLabel</p>
+         <div class="description">
+            <dl>
+               <dt>has domain</dt>
+               <dd>
+                  <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                     target="_blank"
+                     title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+                  <sup class="type-c" title="class">c</sup>
+               </dd>
+               <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd>
+   
+            </dl>
+         </div>
+      </div>
+      <div class="entity" id="referenceText">
+         <h3>epvoc:referenceText<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#referenceText</p>
+         <div class="description">
+            <dl>
+               <dt>has domain</dt>
+               <dd>
+                  <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                     target="_blank"
+                     title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+                  <sup class="type-c" title="class">c</sup>
+               </dd>
+     
+               <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="entity" id="structuredLabel">
+         <h3>epvoc:structuredLabel<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#structuredLabel</p>
+         <div class="description">
+            <dl>
+               <dt>has domain</dt>
+               <dd>
+                  <a href="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity"
+                     target="_blank"
+                     title="http://data.europa.eu/eli/eli-draft-legislation-ontology#Activity">activity</a>
+                  <sup class="type-c" title="class">c</sup>
+               </dd>
+               <dt>Is defined by</dt>
+               <dd>
+                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+               </dd>
+   
+            </dl>
+         </div>
+      </div>
+      <div class="entity" id="votingId">
+         <h3>epvoc:votingId<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#votingId</p>
+         <div class="description">
+   <dl> <dt>Is defined by</dt>
+      <dd>
+         <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+      </dd></dl>
+         </div>
+      </div>
+
+      <div xmlns:widoco="https://w3id.org/widoco/vocab#"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      id="annotationproperties">
+    <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+    <ul class="hlist">
+      <li>
+         <a href="#https://data.europarl.europa.eu/def/epvoc#scAlignment" title="https://data.europarl.europa.eu/def/epvoc#scAlignment">
+            <span>scAlignement
+            </span>
+         </a>
+      </li>
+    </ul>
+    <div class="entity" id="https://data.europarl.europa.eu/def/epvoc#scAlignment">
+       <h3>scAlignment<sup class="type-ap" title="annotation property">ap</sup>
+          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+          </span>
+       </h3>
+       <p>
+          <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#scAlignment</p>
+    </div>
+
       
       
       
@@ -1356,11 +1865,7 @@ This section provides details for each class and property defined by EPVOC.
 </div>
 </div>
 </div>
-<div id="acknowledgments">
-<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>
-The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
-</div>
+
 
 
 </div>
