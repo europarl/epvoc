@@ -1,0 +1,393 @@
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix adms: <https://www.w3.org/TR/vocab-adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix eli-dl: <http://data.europa.eu/eli/eli-draft-legislation-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix epvoc: <https://data.europarl.europa.eu/def/epvoc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+<https://data.europarl.europa.eu/def/epvoc#> a owl:Ontology, adms:Asset;
+  dcterms:title "EPVOC ontology"@en;
+  dcterms:description "The EPVOC ontology defines classes and properties that are re-used across ontologies, vocabularies, and application profiles to represent data of the European Parliament."@en;
+  dcterms:created "2022-11-18"^^xsd:date;
+  dcterms:modified "2024-10-29"^^xsd:date;
+  dcterms:license <https://www.europarl.europa.eu/legal-notice/>;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY>;
+  owl:imports <http://data.europa.eu/eli/eli-draft-legislation-ontology>, <http://data.europa.eu/eli/ontology>,
+    <http://publications.europa.eu/ontology/euvoc>, <http://www.w3.org/2006/vcard/ns>,
+    <http://www.w3.org/2008/05/skos-xl>, <http://www.w3.org/ns/person>, <http://www.w3.org/ns/org#>,
+    <http://xmlns.com/foaf/0.1/>;
+  owl:versionInfo "2.2.0";
+  dcterms:conformsTo <https://www.w3.org/2002/07/owl>;
+  dcterms:creator <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
+  dcterms:publisher <http://publications.europa.eu/resource/dataset/corporate-body/EP>;
+  dcterms:rightsHolder <http://publications.europa.eu/resource/dataset/corporate-body/EURUN>;
+  dcterms:dateCopyrighted "2022"^^xsd:gYear;
+  owl:versionIRI <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP>;
+  foaf:logo <https://www.europarl.europa.eu/portal/img/ep-logo.svg>;
+  vann:preferredNamespaceUri <https://data.europarl.europa.eu/def/epvoc#>;
+  vann:preferredNamespacePrefix "epvoc" .
+
+epvoc:scAlignement a owl:AnnotationProperty;
+  rdfs:label "epvoc:scAlignement"@en;
+  rdfs:comment "This property identifies the alignment with schema.org ontology."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:ContactPoint a owl:Class;
+  rdfs:subClassOf <http://www.w3.org/2006/vcard/ns#Address>;
+  epvoc:scAlignement <https://schema.org/ContactPoint>;
+  rdfs:label "epvoc:ContactPoint"@en;
+  rdfs:comment "This class identifies a contact point for a person or an organisation."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:Room a owl:Class;
+  rdfs:label "epvoc:Room"@en;
+  rdfs:comment "This class identifies a room (physical or virtual), E.g., it can be the room where an activity takes place or a person's office."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:agendaLabel a owl:DatatypeProperty;
+  rdfs:domain eli-dl:ForeseenActivity;
+  rdfs:range xsd:langString;
+  rdfs:label "epvoc:agendaLabel"@en;
+  rdfs:comment "Label in the Agenda."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:byteSize a owl:DatatypeProperty;
+  rdfs:domain eli:Manifestation;
+  rdfs:range xsd:long;
+  rdfs:label "epvoc:byteSize"@en;
+  rdfs:comment "This property identifies the size of a file in bytes."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:deathDate a owl:DatatypeProperty;
+  rdfs:domain foaf:Person;
+  rdfs:range xsd:dateTime;
+  rdfs:label "epvoc:deathDate"@en;
+  rdfs:comment "This property identifies the death date of a person."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:decisionAboutId a owl:DatatypeProperty;
+  rdfs:domain eli-dl:Decision;
+  rdfs:range xsd:string, rdf:XMLLiteral;
+  rdfs:label "epvoc:decisionAboutId"@en;
+  rdfs:comment "This property identifies uniquelely the object of a decision."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:epNumber a owl:DatatypeProperty;
+  rdfs:subPropertyOf dct:identifier;
+  rdfs:label "epvoc:epNumber"@en;
+  rdfs:comment "This property indicates the internal identifier of documents of the European Parliament used by the EP Public Register."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:epNumberVersion a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf dct:identifier;
+  rdfs:label "epvoc:epNumberVersion"@en;
+  rdfs:comment "This property identifies the version the epvoc:epNumber."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:expressionContent a owl:DatatypeProperty;
+  rdfs:range xsd:langString;
+  rdfs:label "epvoc:expressionContent"@en;
+  rdfs:comment "This property is a shortcut of the more fully developed path from eli:Work to eli:Expression"@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:hadResponsibleOrganization a owl:DatatypeProperty;
+  rdfs:domain eli-dl:Activity;
+  rdfs:range org:Organization;
+  rdfs:label "epvoc:hadResponsibleOrganization"@en;
+  rdfs:comment "This property identifies the name of the responsible organization."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:headingLabel a owl:DatatypeProperty;
+  rdfs:domain eli-dl:Activity;
+  rdfs:range xsd:langString;
+  rdfs:label "epvoc:headingLabel"@en;
+  rdfs:comment "Heading section label."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:identifierYear a owl:DatatypeProperty;
+  rdfs:domain eli:Work;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf dct:identifier;
+  rdfs:label "epvoc:identifierYear"@en;
+  rdfs:comment "This property indicates the year identifier for a document."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:itemNumberBegin a owl:DatatypeProperty;
+  rdfs:domain eli:Work;
+  rdfs:range xsd:integer;
+  rdfs:label "epvoc:itemNumberBegin"@en;
+  rdfs:comment "This property identifies the starting number in a list of items."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:ItemNumberEnd a owl:DatatypeProperty;
+  rdfs:domain eli:Work;
+  rdfs:range xsd:integer;
+  rdfs:label "epvoc:ItemNumberEnd"@en;
+  rdfs:comment "This property identifies the ending number in a list of items."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:numbering a owl:DatatypeProperty;
+  rdfs:domain eli:Work;
+  rdfs:label "epvoc:numbering"@en;
+  rdfs:comment "This property refers to a number sequence that indicates order or is used for identification."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:officialFamilyName a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf foaf:familyName;
+  rdfs:label "epvoc:officialFamilyName"@en;
+  rdfs:comment "This property identifies the family name of a person in the original language script."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:officialGivenName a owl:DatatypeProperty;
+  rdfs:subPropertyOf foaf:givenName;
+  rdfs:label "epvoc:officialGivenName"@en;
+  rdfs:comment "This property identifies the family name of a person in the original language script."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:referenceText a owl:DatatypeProperty;
+  rdfs:domain eli-dl:Activity;
+  rdfs:range xsd:langString;
+  rdfs:label "epvoc:referenceText"@en;
+  rdfs:comment "Reference text."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:sortLabel a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  rdfs:label "epvoc:sortLabel"@en;
+  rdfs:comment "This property identifies the part of the family name of the Person used to sort alphabetically in a list."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:structuredLabel a owl:DatatypeProperty;
+  rdfs:domain eli-dl:Activity;
+  rdfs:range xsd:langString;
+  rdfs:label "epvoc:structuredLabel"@en;
+  rdfs:comment "Structured label."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:translationReference a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf dct:identifier;
+  rdfs:label "epvoc:translationReference"@en;
+  rdfs:comment "This property identifies the translation reference code for a Work or resource."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:upperFamilyName a owl:DatatypeProperty;
+  rdfs:domain foaf:Person;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf foaf:familyName;
+  rdfs:label "epvoc:upperFamilyName"@en;
+  rdfs:comment "This property identifies the uppercase family name of a person."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:upperGivenName a owl:DatatypeProperty;
+  rdfs:domain foaf:Person;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf foaf:givenName;
+  rdfs:label "epvoc:upperGivenName"@en;
+  rdfs:comment "This property identifies the uppercase given name of a person."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:upperOfficialFamilyName a owl:DatatypeProperty;
+  rdfs:domain foaf:Person;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf foaf:familyName;
+  rdfs:label "epvoc:upperOfficialFamilyName"@en;
+  rdfs:comment "This property identifies the uppercase family name of a person in the original language script."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:upperOfficialGivenName a owl:DatatypeProperty;
+  rdfs:domain foaf:Person;
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf foaf:givenName;
+  rdfs:label "epvoc:upperOfficialGivenName"@en;
+  rdfs:comment "This property identifies the uppercase given name of a person in the original language script."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:hasRoom a owl:ObjectProperty;
+  rdfs:domain eli-dl:Activity;
+  rdfs:range epvoc:Room;
+  rdfs:label "epvoc:hasRoom"@en;
+  rdfs:comment "This property associates a resource with a room (physical or virtual), . E.g., it can be the room where an activity takes place or a person's office."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:hasSite a owl:ObjectProperty;
+  rdfs:range org:Site;
+  rdfs:label "epvoc:hasSite"@en;
+  rdfs:comment "This property identifies the site where a resource is located."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:isAboutDirectoryCode a owl:ObjectProperty;
+  rdfs:domain eli:Work;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf eli:is_about;
+  rdfs:label "epvoc:isAboutDirectoryCode"@en;
+  rdfs:comment "This property is a subproperty of eli:is_about and identifies the directory code of a Work. It points to concepts of the dir-eu-legal-act OP vocabulary."@en;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:isAboutSubjectMatter a owl:ObjectProperty;
+  rdfs:domain eli:Work;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf eli:is_about;
+  rdfs:label "epvoc:isAboutSubjectMatter"@en;
+  rdfs:comment "This property is a subproperty of eli:is_about and identifies the subject matter of a Work. It points to concepts of the subject-matter OP vocabulary."@en;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:memberDuringParliamentaryTerm a owl:ObjectProperty;
+  rdfs:domain org:Membership;
+  rdfs:range eli-dl:ParliamentaryTerm;
+  rdfs:subPropertyOf org:organization;
+  rdfs:label "epvoc:memberDuringParliamentaryTerm"@en;
+  rdfs:comment "This property identifies the parliamentary term during which a person was a Member of the European Parliament."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:membershipClassification a owl:ObjectProperty;
+  rdfs:domain org:Membership;
+  rdfs:range euvoc:CorporateBodyClassification;
+  rdfs:label "epvoc:membershipClassification"@en;
+  rdfs:comment "This property identifies the classification of an organisation linked to a membership."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:originalLanguage a owl:ObjectProperty;
+  rdfs:domain eli:Work;
+  rdfs:range dct:LinguisticSystem;
+  rdfs:label "epvoc:originalLanguage"@en;
+  rdfs:comment "This property identifies the original language of a Work."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:scheduledIn a owl:ObjectProperty;
+  rdfs:range eli-dl:Activity;
+  rdfs:label "epvoc:scheduledIn"@en;
+  rdfs:comment "This property identifies the relation between scheduled Activities"@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:versionType a owl:ObjectProperty;
+  rdfs:domain eli:Work;
+  rdfs:range epvoc:Status;
+  rdfs:label "epvoc:versionType"@en;
+  rdfs:comment "This property identifies the type of version of a Work."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:workHadParticipation a owl:ObjectProperty;
+  rdfs:domain eli:Work;
+  rdfs:range eli:Participation;
+  rdfs:label "epvoc:workHadParticipation"@en;
+  rdfs:comment "This property is a shortcut of the more fully developed path from eli:Work through an inverse of eli-dl:involved_work to an eli-dl:Activity, then eli-dl:had_participation to eli-dl:Participation. The eli-dl:Activity can be explicitly declared in the data, or not. The Participations referred to directly from a Work can come from different Activities (drafting, creation, publication, etc.); the fact that it is a shortcut of eli-dl:involved_work mean that the Participations do not necessarily come only from an Activity that created_a_realization_of the Work, but can come from any Activity in which this Work was used."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:agendaPoint a rdfs:Datatype;
+  rdfs:label "epvoc:agendaPoint"@en;
+  rdfs:comment "This property identifies a specific point in Agenda."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:codictBodyId a rdfs:Datatype;
+  rdfs:label "epvoc:codictBodyId"@en;
+  rdfs:comment "Body identifier in Codict."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:codictFunctionId a rdfs:Datatype;
+  rdfs:label "epvoc:codictFunctionId"@en;
+  rdfs:comment "Function identifier in Codict."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:codictMandateId a rdfs:Datatype;
+  rdfs:label "epvoc:codictMandateId"@en;
+  rdfs:comment "Mandate identifier in Codict."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:codictPersonId a rdfs:Datatype;
+  rdfs:label "epvoc:codictPersonId"@en;
+  rdfs:comment "Person identifier in Codict."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:dlvId a rdfs:Datatype;
+  rdfs:label "epvoc:dlvId"@en;
+  rdfs:comment "Identifier in DLV."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:periclesId a rdfs:Datatype;
+  rdfs:label "epvoc:periclesId"@en;
+  rdfs:comment "Identifier in Pericles."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:publicRegister a rdfs:Datatype;
+  rdfs:label "epvoc:publicRegister"@en;
+  rdfs:comment "Identifier in Public Register."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:speechId a rdfs:Datatype;
+  rdfs:label "epvoc:speechId"@en;
+  rdfs:comment "Identifier of a speech"@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .
+
+epvoc:votingId a rdfs:Datatype;
+  rdfs:label "epvoc:votingId"@en;
+  rdfs:comment "Identifier of Voting."@en;
+  rdfs:isDefinedBy <https://data.europarl.europa.eu/def/epvoc#>;
+  adms:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> .

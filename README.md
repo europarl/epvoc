@@ -14,6 +14,7 @@ EPVOC is an ontology that defines classes and properties that are re-used across
 - [Version 1.2](./1.2/)
 - [Version 2.1.0](./2.1.0/)
 - [Version 2.2.0](./2.2.0/)
+- [Version 2.3.0](./2.3.0/)
 
 ## Licence
 
