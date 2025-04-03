@@ -61,14 +61,14 @@ $(function(){
 <dt>Latest version:</dt>
 <dd><a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a></dd>
 <dt>Revision:</dt>
-<dd>2.1.0</dd>
+<dd>2.3.0</dd>
 <dt>Imported Ontologies:</dt>
 <dd><a href="http://data.europa.eu/eli/ontology#">ELI Ontology</a></dd><dd><a href="http://www.w3.org/2004/02/skos/core">SKOS Simple Knowledge Organization System
    Reference</a></dd><dd><a href="http://www.w3.org/2006/vcard/ns">vcard</a></dd><dd><a href="http://www.w3.org/2008/05/skos-xl">SKOS eXtension for Labels (SKOS-XL)</a></dd><dd><a href="http://www.w3.org/ns/org#">The Organization Ontology (ORG)</a></dd><dd><a href="http://www.w3.org/ns/person">Person Ontology</a></dd>
 
 <dt>Download serialization:</dt><dd><span><a href="epvoc.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.europarl.europa.eu/legal-notice" target="_blank"><img src="https://img.shields.io/badge/License-European%20Parliament%20Legal%20Notice-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd> Revision: 2.1.0.</dd>
+<dd> Revision: 2.3.0.</dd>
 </dl>
 
 <hr/>
@@ -266,12 +266,6 @@ This ontology has the following classes and properties.</span>
       <a href="#periclesId	" title="https://data.europarl.europa.eu/def/epvoc#periclesId	">epvoc:periclesId</a>
    </li>
    <li>
-      <a href="#agendaId"
-         title="https://data.europarl.europa.eu/def/epvoc#agendaId">
-         <span>epvoc:agendaId</span>
-      </a>
-   </li>
-   <li>
       <a href="#agendaPoint"
          title="https://data.europarl.europa.eu/def/epvoc#agendaPoint">
          <span>epvoc:agendaPoint</span>
@@ -310,6 +304,18 @@ This ontology has the following classes and properties.</span>
       <a href="#speechId"
          title="https://data.europarl.europa.eu/def/epvoc#speechId">
          <span>epvoc:speechId</span>
+      </a>
+   </li>
+      <li>
+      <a href="#epvoc:structuredContent"
+         title="https://data.europarl.europa.eu/def/epvoc#structuredContent">
+         <span>epvoc:structuredContent</span>
+      </a>
+   </li>
+      <li>
+      <a href="#epvoc:speakingTimeContent"
+         title="https://data.europarl.europa.eu/def/epvoc#speakingTimeContent">
+         <span>epvoc:speakingTimeContent</span>
       </a>
    </li>
 </ul>
@@ -1110,12 +1116,6 @@ This section provides details for each class and property defined by EPVOC.
                   target="_blank"
                   title="http://data.europa.eu/eli/ontology#Work">work</a>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
          </dl>
       </div>
    </div>
@@ -1622,6 +1622,59 @@ This section provides details for each class and property defined by EPVOC.
          <li>
             <a href="#periclesId	" title="https://data.europarl.europa.eu/def/epvoc#periclesId	">epvoc:periclesId</a>
          </li>
+		    <li>
+      <a href="#agendaPoint"
+         title="https://data.europarl.europa.eu/def/epvoc#agendaPoint">
+         <span>epvoc:agendaPoint</span>
+      </a>
+   </li>
+   <li>
+      <a href="#dlvId" title="https://data.europarl.europa.eu/def/epvoc#dlvId">
+         <span>epvoc:dlvId</span>
+      </a>
+   </li>
+   <li>
+      <a href="#headingLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#headingLabel">
+         <span>epvoc:headingLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referenceText"
+         title="https://data.europarl.europa.eu/def/epvoc#referenceText">
+         <span>epvoc:referenceText</span>
+      </a>
+   </li>
+   <li>
+      <a href="#structuredLabel"
+         title="https://data.europarl.europa.eu/def/epvoc#structuredLabel">
+         <span>epvoc:structuredLabel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#votingId"
+         title="https://data.europarl.europa.eu/def/epvoc#votingId">
+         <span>epvoc:votingId</span>
+      </a>
+   </li>
+   <li>
+      <a href="#speechId"
+         title="https://data.europarl.europa.eu/def/epvoc#speechId">
+         <span>epvoc:speechId</span>
+      </a>
+   </li>
+      <li>
+      <a href="#epvoc:structuredContent"
+         title="https://data.europarl.europa.eu/def/epvoc#structuredContent">
+         <span>epvoc:structuredContent</span>
+      </a>
+   </li>
+      <li>
+      <a href="#epvoc:speakingTimeContent"
+         title="https://data.europarl.europa.eu/def/epvoc#speakingTimeContent">
+         <span>epvoc:speakingTimeContent</span>
+      </a>
+   </li>
       </ul>
       <div class="entity" id="codictBodyId">
          <h3>epvoc:codictBodyId<sup class="type-dt" title="datatype">dt</sup>
@@ -1733,23 +1786,6 @@ This section provides details for each class and property defined by EPVOC.
                <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
             </dd>
          </dl>
-      </div>
-      <div class="entity" id="agendaId">
-         <h3>epvoc:agendaId<sup class="type-dt" title="datatype">dt</sup>
-            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
-            </span>
-         </h3>
-         <p>
-            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#agendaId</p>
-         <div class="description">
-            <dl>
-               <dt>Is defined by</dt>
-               <dd>
-                  <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
-               </dd>
-   
-            </dl>
-         </div>
       </div>
       <div class="entity" id="agendaPoint">
          <h3>epvoc:agendaPoint<sup class="type-dt" title="datatype">dt</sup>
@@ -1877,6 +1913,36 @@ This section provides details for each class and property defined by EPVOC.
          </h3>
          <p>
             <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#speechId</p>
+         <div class="description">
+   <dl> <dt>Is defined by</dt>
+      <dd>
+         <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+      </dd></dl>
+         </div>
+      </div>
+	  
+	        <div class="entity" id="structuredContent">
+         <h3>epvoc:structuredContent<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#structuredContent</p>
+         <div class="description">
+   <dl> <dt>Is defined by</dt>
+      <dd>
+         <a href="https://data.europarl.europa.eu/def/epvoc#">https://data.europarl.europa.eu/def/epvoc#</a>
+      </dd></dl>
+         </div>
+      </div>
+	  
+	        <div class="entity" id="speakingTimeContent">
+         <h3>epvoc:speakingTimeContent<sup class="type-dt" title="datatype">dt</sup>
+            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#datatypes">datatype ToC</a>
+            </span>
+         </h3>
+         <p>
+            <strong>IRI:</strong> https://data.europarl.europa.eu/def/epvoc#speakingTimeContent</p>
          <div class="description">
    <dl> <dt>Is defined by</dt>
       <dd>
